@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Lisha 🎂</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b0b10;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(125, 92, 255, 0.18),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 70%,
+                    rgba(255, 91, 146, 0.12),
+                    transparent 30%
+                );
+
+            pointer-events: none;
+            z-index: -2;
+        }
+
+        .stars {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+
+            width: 3px;
+            height: 3px;
+
+            background: white;
+            border-radius: 50%;
+
+            opacity: 0.5;
+
+            animation: twinkle 3s infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0.15;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.8);
+            }
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            width: min(900px, 90%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px 0;
+        }
+
+        .small-text {
+            color: #8e8e9d;
+
+            font-size: 13px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 12vw, 120px);
+
+            line-height: 0.9;
+
+            letter-spacing: -6px;
+
+            margin-bottom: 30px;
+        }
+
+        .hero h1 span {
+            color: #9b7cff;
+        }
+
+        .hero p {
+            max-width: 550px;
+
+            color: #a5a5b0;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        .birthday-date {
+            margin-top: 25px;
+
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            border: 1px solid #292936;
+
+            border-radius: 50px;
+
+            color: #b8b8c4;
+
+            font-size: 13px;
+        }
+
+        .arrow {
+            margin-top: 70px;
+
+            color: #666674;
+
+            font-size: 25px;
+
+            animation: bounce 1.8s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(10px);
+            }
+        }
+
+
+        /* =========================
+           BIRTHDAY CARD
+        ========================= */
+
+        .birthday-section {
+            padding: 120px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.035);
+
+            border: 1px solid #282832;
+
+            border-radius: 25px;
+
+            padding: 50px;
+
+            text-align: center;
+
+            box-shadow:
+                0 30px 100px rgba(0, 0, 0, 0.35);
+        }
+
+        .cake {
+            font-size: 80px;
+
+            margin-bottom: 25px;
+
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .card h2 {
+            font-size: clamp(35px, 6vw, 60px);
+
+            letter-spacing: -2px;
+
+            margin-bottom: 20px;
+        }
+
+        .card h2 span {
+            color: #ff79a8;
+        }
+
+        .card p {
+            color: #9696a3;
+
+            font-size: 17px;
+
+            line-height: 1.8;
+
+            max-width: 600px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           FUN SECTION
+        ========================= */
+
+        .fun {
+            padding: 120px 0;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 60px;
+        }
+
+        .section-title small {
+            color: #777785;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+
+            font-size: 11px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(35px, 6vw, 60px);
+
+            margin-top: 15px;
+
+            letter-spacing: -2px;
+        }
+
+
+        /* =========================
+           MINI CARDS
+        ========================= */
+
+        .grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .mini-card {
+            padding: 30px;
+
+            background: #111117;
+
+            border: 1px solid #272731;
+
+            border-radius: 18px;
+
+            transition:
+                transform 0.3s,
+                border-color 0.3s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #7564ff;
+        }
+
+        .mini-card .emoji {
+            font-size: 35px;
+
+            margin-bottom: 20px;
+        }
+
+        .mini-card h3 {
+            margin-bottom: 10px;
+
+            font-size: 19px;
+        }
+
+        .mini-card p {
+            color: #777783;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button-section {
+            padding: 120px 0;
+
+            text-align: center;
+        }
+
+        .button-section h2 {
+            font-size: clamp(35px, 6vw, 60px);
+
+            margin-bottom: 15px;
+
+            letter-spacing: -2px;
+        }
+
+        .button-section > p {
+            color: #777783;
+
+            margin-bottom: 35px;
+        }
+
+        button {
+            border: none;
+
+            padding: 16px 25px;
+
+            border-radius: 10px;
+
+            background: #7d6cff;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(125, 108, 255, 0.3);
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+
+        /* =========================
+           HIDDEN MESSAGE
+        ========================= */
+
+        #secret {
+            display: none;
+
+            margin: 35px auto 0;
+
+            max-width: 550px;
+
+            padding: 30px;
+
+            border-radius: 15px;
+
+            background: #15151d;
+
+            border: 1px solid #302d48;
+
+            animation: appear 0.5s ease;
+        }
+
+        #secret.show {
+            display: block;
+        }
+
+        #secret .big {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        #secret h3 {
+            font-size: 25px;
+
+            margin-bottom: 10px;
+        }
+
+        #secret p {
+            color: #858592;
+
+            line-height: 1.7;
+        }
+
+        @keyframes appear {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================
+           FINAL
+        ========================= */
+
+        .final {
+            min-height: 80vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding: 100px 0;
+        }
+
+        .final .emoji {
+            font-size: 65px;
+
+            margin-bottom: 25px;
+        }
+
+        .final h2 {
+            font-size: clamp(40px, 8vw, 80px);
+
+            letter-spacing: -4px;
+
+            line-height: 1;
+        }
+
+        .final h2 span {
+            color: #9b7cff;
+        }
+
+        .final p {
+            color: #777783;
+
+            margin-top: 25px;
+
+            font-size: 16px;
+        }
+
+        .signature {
+            margin-top: 60px;
+
+            color: #4e4e59;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px 0 50px;
+
+            text-align: center;
+
+            color: #44444e;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           CONFETTI
+        ========================= */
+
+        .confetti {
+            position: fixed;
+
+            top: -20px;
+
+            width: 8px;
+            height: 8px;
+
+            z-index: 100;
+
+            pointer-events: none;
+
+            animation: fall 3s linear forwards;
+        }
+
+        @keyframes fall {
+
+            to {
+                transform:
+                    translateY(110vh)
+                    rotate(720deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 35px 25px;
+            }
+
+            .cake {
+                font-size: 65px;
+            }
+
+            .final h2 {
+                letter-spacing: -3px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- STAR BACKGROUND -->
+
+    <div class="stars"></div>
+
+
+    <main class="container">
+
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="small-text">
+                ✦ special notification ✦
+            </div>
+
+            <h1>
+                Happy<br>
+                <span>Birthday, Lisha.</span>
+            </h1>
+
+            <p>
+                Apparently today you're allowed to be
+                slightly more annoying than usual.
+            </p>
+
+            <div class="birthday-date">
+                🎂 29 September
+            </div>
+
+            <div class="arrow">
+                ↓
+            </div>
+
+        </section>
+
+
+
+        <!-- BIRTHDAY MESSAGE -->
+
+        <section class="birthday-section">
+
+            <div class="card">
+
+                <div class="cake">
+                    🎂
+                </div>
+
+                <h2>
+                    You made it to
+                    <span>another year.</span>
+                </h2>
+
+                <p>
+                    No long emotional paragraph.
+                    No dramatic speech.
+                    No motivational TED Talk.
+                    <br><br>
+                    Just a simple:
+                    <strong>Happy Birthday, Lisha.</strong>
+                    <br>
+                    Have a good one.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FUN CARDS -->
+
+        <section class="fun">
+
+            <div class="section-title">
+
+                <small>
+                    birthday statistics
+                </small>
+
+                <h2>
+                    Today's situation
+                </h2>
+
+            </div>
+
+
+            <div class="grid">
+
+
+                <div class="mini-card">
+
+                    <div class="emoji">
+                        🧁
+                    </div>
+
+                    <h3>
+                        Cake
+                    </h3>
+
+                    <p>
+                        Required. Obviously.
+                        There is no debate here.
+                    </p>
+
+                </div>
+
+
+                <div class="mini-card">
+
+                    <div class="emoji">
+                        😌
+                    </div>
+
+                    <h3>
+                        Responsibilities
+                    </h3>
+
+                    <p>
+                        Temporarily ignored.
+                        It's your birthday.
+                    </p>
+
+                </div>
+
+
+                <div class="mini-card">
+
+                    <div class="emoji">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Vibe
+                    </h3>
+
+                    <p>
+                        Chill.
+                        That's literally the entire plan.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- BUTTON -->
+
+        <section class="button-section">
+
+            <h2>
+                One last thing.
+            </h2>
+
+            <p>
+                There may or may not be something behind this button.
+            </p>
+
+            <button id="surpriseButton">
+                🎁 definitely don't click
+            </button>
+
+
+            <div id="secret">
+
+                <div class="big">
+                    🥳
+                </div>
+
+                <h3>
+                    Okay fine.
+                </h3>
+
+                <p>
+                    Happy Birthday again, Lisha.
+                    <br><br>
+                    Now go eat something good and enjoy your day.
+                    <br>
+                    That's your only assignment.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FINAL -->
+
+        <section class="final">
+
+            <div class="emoji">
+                🎉
+            </div>
+
+            <h2>
+                Have a good one,
+                <br>
+                <span>Lisha.</span>
+            </h2>
+
+            <p>
+                Stay cool. Eat cake. Ignore unnecessary problems.
+            </p>
+
+            <div class="signature">
+                made specifically for you · 2026
+            </div>
+
+        </section>
+
+
+        <footer>
+            © 2026 · Birthday Department
+        </footer>
+
+
+    </main>
+
+
+
+    <script>
+
+        /* =========================
+           CREATE STARS
+        ========================= */
+
+        const starContainer =
+            document.querySelector(".stars");
+
+        for (let i = 0; i < 45; i++) {
+
+            const star =
+                document.createElement("div");
+
+            star.classList.add("star");
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+            star.style.top =
+                Math.random() * 100 + "%";
+
+            star.style.animationDelay =
+                Math.random() * 3 + "s";
+
+            starContainer.appendChild(star);
+        }
+
+
+
+        /* =========================
+           SURPRISE BUTTON
+        ========================= */
+
+        const button =
+            document.getElementById("surpriseButton");
+
+        const secret =
+            document.getElementById("secret");
+
+
+        button.addEventListener("click", function () {
+
+            secret.classList.add("show");
+
+            button.textContent =
+                "okay okay, you found it 😭";
+
+            createConfetti();
+
+        });
+
+
+
+        /* =========================
+           CONFETTI
+        ========================= */
+
+        function createConfetti() {
+
+            const colors = [
+                "#9b7cff",
+                "#ff79a8",
+                "#72e6ff",
+                "#ffffff",
+                "#ffd166"
+            ];
+
+
+            for (let i = 0; i < 80; i++) {
+
+                const piece =
+                    document.createElement("div");
+
+                piece.classList.add("confetti");
+
+                piece.style.left =
+                    Math.random() * 100 + "vw";
+
+                piece.style.background =
+                    colors[
+                        Math.floor(
+                            Math.random() * colors.length
+                        )
+                    ];
+
+                piece.style.animationDuration =
+                    (Math.random() * 2 + 2) + "s";
+
+                piece.style.animationDelay =
+                    Math.random() * 0.5 + "s";
+
+                piece.style.transform =
+                    `rotate(${Math.random() * 360}deg)`;
+
+                document.body.appendChild(piece);
+
+
+                setTimeout(() => {
+                    piece.remove();
+                }, 3500);
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
